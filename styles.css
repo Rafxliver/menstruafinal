@@ -15,6 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Estilo global */
 body {
@@ -29,12 +32,13 @@ body {
 /* Estilo do menu */
 .menu {
     background-color: var(--cor-principal);
-    padding: 20px 0;
+    padding: 10px 0;  /* Diminuindo o padding do nav */
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;  /* Espaço entre o menu e o slider */
 }
 
 .menu-item-container {
@@ -48,16 +52,16 @@ body {
 
 .menu-item {
     position: relative;
-    margin: 0 30px;
+    margin: 0 20px;  /* Diminui o espaço entre os itens */
 }
 
 .menu-item a {
     text-decoration: none;
     color: var(--cor-texto-claro);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;  /* Diminuindo o tamanho da fonte */
     text-transform: uppercase;
-    padding: 12px 20px;
+    padding: 8px 18px;  /* Menos padding nos itens */
     border-radius: 30px;
     display: inline-block;
     transition: all 0.3s ease;
@@ -90,7 +94,7 @@ body {
 
 .submenu li a {
     color: var(--cor-texto-escuro);
-    font-size: 1rem;
+    font-size: 0.9rem;  /* Fonte do submenu um pouco menor */
     padding: 8px 15px;
     text-transform: none;
     border-radius: 5px;
@@ -135,14 +139,21 @@ p {
 footer {
     background-color: var(--cor-principal); /* Cor do menu para o rodapé */
     padding: 20px 0;
-    text-align: center;
     color: var(--cor-fundo);
+    text-align: center;  /* Centraliza o texto */
+    width: 100%;  /* Garante que o footer ocupe toda a largura */
+    position: relative;
+    bottom: 0;
+    margin-top: 40px;  /* Distância do conteúdo anterior */
 }
 
 footer p {
-    margin: 0;
     font-size: 1rem;
+    text-align: center; /* Garante que o texto dentro do parágrafo também seja centralizado */
 }
+
+
+
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
@@ -157,7 +168,7 @@ footer p {
 
     .menu-item a {
         font-size: 1.1rem;
-        padding: 15px 25px;
+        padding: 12px 25px;
     }
 
     .submenu {
@@ -179,8 +190,7 @@ footer p {
     }
 }
 
-
-
+/* Estilo do slider */
 .slider{
     margin: 0 auto;
     width: 800px;
